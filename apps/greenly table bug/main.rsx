@@ -48,7 +48,7 @@
         format="tag"
         formatOptions={{ automaticColors: true }}
         groupAggregationMode="none"
-        hidden={'{{ listFields.value?.[0]?.type!=="Dropdown" }}'}
+        hidden="false"
         label={
           '{{ listFields.value?.[0]?.type=="Dropdown" ? listFields.value?.[0]?.name?.[localStorage.values.language] : "Dropdown[0]" }}'
         }
@@ -72,7 +72,7 @@
         format="decimal"
         formatOptions={{ showSeparators: true, notation: "standard" }}
         groupAggregationMode="sum"
-        hidden={'{{ listFields.value?.[0]?.type!=="Number" }}'}
+        hidden="false"
         label={
           '{{ listFields.value?.[0]?.type=="Number" ? listFields.value?.[0]?.name?.[localStorage.values.language] : "Number[0]" }}'
         }
@@ -90,7 +90,7 @@
         alignment="left"
         format="html"
         groupAggregationMode="none"
-        hidden={'{{ listFields.value?.[0]?.type!=="Freight" }}'}
+        hidden="false"
         label={
           '{{ listFields.value?.[0]?.type=="Freight" ? listFields.value?.[0]?.name?.[localStorage.values.language] : "Freight[0]" }}'
         }
@@ -116,57 +116,15 @@
         />
       </Column>
       <Column
-        id="71e32"
-        alignment="left"
-        format="tag"
-        formatOptions={{ automaticColors: true }}
-        groupAggregationMode="none"
-        key="name"
-        label="Name"
-        placeholder="Select option"
-        position="center"
-        size={74.34375}
-        summaryAggregationMode="none"
-        valueOverride="{{ _.startCase(item) }}"
-      />
-      <Column
-        id="60267"
-        alignment="left"
-        format="tag"
-        formatOptions={{ automaticColors: true }}
-        groupAggregationMode="none"
-        key="type"
-        label="Type"
-        placeholder="Select option"
-        position="center"
-        size={64.109375}
-        summaryAggregationMode="none"
-        valueOverride="{{ _.startCase(item) }}"
-      />
-      <Column
-        id="3b19b"
-        alignment="right"
-        editableOptions={{ showStepper: true }}
-        format="decimal"
-        formatOptions={{ showSeparators: true, notation: "standard" }}
-        groupAggregationMode="sum"
-        key="quantity"
-        label="Quantity"
-        placeholder="Enter value"
-        position="center"
-        size={65.984375}
-        summaryAggregationMode="none"
-      />
-      <Column
-        id="5e97e"
+        id="1c4e1"
         alignment="left"
         format="string"
         groupAggregationMode="none"
-        key="freight"
-        label="Freight"
+        label="Column 5"
         placeholder="Enter value"
         position="center"
-        size={197.84375}
+        referenceId="column5"
+        size={100}
         summaryAggregationMode="none"
       />
       <ToolbarButton
