@@ -120,12 +120,17 @@
         alignment="left"
         format="string"
         groupAggregationMode="none"
-        label="Column 5"
+        label={
+          '{{ listFields.value?.[0]?.type=="Dropdown" ? listFields.value?.[0]?.name?.[localStorage.values.language] : "Dropdown[0]" }}'
+        }
         placeholder="Enter value"
         position="center"
-        referenceId="column5"
+        referenceId={
+          '{{ listFields.value?.[0]?.type=="Dropdown" ? listFields.value[0].id : "Dropdown[0]" }}'
+        }
         size={100}
         summaryAggregationMode="none"
+        valueOverride="{{ self.data[i]?.[listFields.value?.[0]?.id] }}"
       />
       <ToolbarButton
         id="1a"
