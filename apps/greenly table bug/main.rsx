@@ -115,25 +115,6 @@
           waitType="debounce"
         />
       </Column>
-      <Column
-        id="793b2"
-        alignment="left"
-        format="tag"
-        formatOptions={{ automaticColors: true }}
-        groupAggregationMode="none"
-        key="name"
-        label={
-          '{{ listFields.value?.[0]?.type=="Dropdown" ? listFields.value?.[0]?.name?.[localStorage.values.language] : "Dropdown[0]" }}'
-        }
-        placeholder="Select option"
-        position="center"
-        referenceId={
-          '{{ listFields.value?.[0]?.type=="Dropdown" ? listFields.value[0].id : "Dropdown[0]" }}'
-        }
-        size={74.34375}
-        summaryAggregationMode="none"
-        valueOverride="{{ _.startCase(item) }}"
-      />
       <ToolbarButton
         id="1a"
         icon="bold/interface-text-formatting-filter-2"
