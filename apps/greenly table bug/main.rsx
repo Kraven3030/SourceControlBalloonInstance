@@ -128,9 +128,63 @@
         referenceId={
           '{{ listFields.value?.[0]?.type=="Dropdown" ? listFields.value[0].id : "Dropdown[0]" }}'
         }
-        size={100}
+        size={93.5}
         summaryAggregationMode="none"
         valueOverride="{{ self.data[i]?.[listFields.value?.[0]?.id] }}"
+      />
+      <Column
+        id="270e1"
+        alignment="left"
+        format="tag"
+        formatOptions={{ automaticColors: true }}
+        groupAggregationMode="none"
+        key="name"
+        label="Name"
+        placeholder="Select option"
+        position="center"
+        size={74.34375}
+        summaryAggregationMode="none"
+        valueOverride="{{ _.startCase(item) }}"
+      />
+      <Column
+        id="2a3b8"
+        alignment="left"
+        format="tag"
+        formatOptions={{ automaticColors: true }}
+        groupAggregationMode="none"
+        key="type"
+        label="Type"
+        placeholder="Select option"
+        position="center"
+        size={64.109375}
+        summaryAggregationMode="none"
+        valueOverride="{{ _.startCase(item) }}"
+      />
+      <Column
+        id="60e77"
+        alignment="right"
+        editableOptions={{ showStepper: true }}
+        format="decimal"
+        formatOptions={{ showSeparators: true, notation: "standard" }}
+        groupAggregationMode="sum"
+        key="quantity"
+        label="Quantity"
+        placeholder="Enter value"
+        position="center"
+        size={65.984375}
+        summaryAggregationMode="none"
+      />
+      <Column
+        id="410a6"
+        alignment="left"
+        format="string"
+        groupAggregationMode="none"
+        key="freight"
+        label="Freight"
+        placeholder="Enter value"
+        position="center"
+        size={197.84375}
+        summaryAggregationMode="none"
       />
       <ToolbarButton
         id="1a"
