@@ -1,4 +1,9 @@
 {
+  "button1": {
+    "row": 2.2,
+    "col": 4,
+    "height": 1
+  },
   "table1": {
     "row": 4,
     "col": 2,

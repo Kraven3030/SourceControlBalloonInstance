@@ -1,4 +1,5 @@
 <App>
+  <Button id="button1" styleVariant="solid" text="Button" />
   <Table
     id="table1"
     cellSelection="none"
