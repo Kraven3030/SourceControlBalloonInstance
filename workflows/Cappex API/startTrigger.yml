@@ -1,0 +1,121 @@
+id: startTrigger
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: >-
+        return
+        [{"date":"2023-05-18T00:00:00.000Z","lead_id":12289707,"client_id":12375510,"ipeds_id":164155,"cid":442590,"f_name":"Charlie","l_name":"Topping","email_address":"charlie.f.topping@gmail.com","birth_month":"09","birth_date":"01","birth_year":2006,"country_id":"US","gender":"Male","hs_grad_month":"6","hs_grad_year":2025,"studentType":"1","address":"897
+        ANCESTRY CIR","address_2":"# 9","addr2_edit":"# 9","city_name":"Bel
+        Air","state_name":"MD","zip_code":"21015-6099","nonweighted_hs_gpa":3.5,"sat_score":0,"act_score":0,"college":"United
+        States Naval
+        Academy","cappex_major_id":null,"ranker":"1"},{"date":"2023-05-18T00:00:00.000Z","lead_id":12289759,"client_id":12375562,"ipeds_id":134130,"cid":384441,"f_name":"Leo","l_name":"Daiss","email_address":"ladaiss06@gmail.com","birth_month":"10","birth_date":"11","birth_year":2006,"country_id":"US","gender":"Male","hs_grad_month":"6","hs_grad_year":2025,"studentType":"1","address":"12353
+        Deerfield Rd","address_2":"","addr2_edit":"","city_name":"HILL
+        CITY","state_name":"SD","zip_code":"57745","nonweighted_hs_gpa":3.8,"sat_score":0,"act_score":0,"college":"University
+        of
+        Florida","cappex_major_id":null,"ranker":"1"},{"date":"2023-05-18T00:00:00.000Z","lead_id":12289811,"client_id":12375614,"ipeds_id":209551,"cid":445348,"f_name":"Nathan","l_name":"Lindbloom","email_address":"lindbloom10262090@district6.org","birth_month":"07","birth_date":"24","birth_year":2008,"country_id":"US","gender":"Male","hs_grad_month":"6","hs_grad_year":2026,"studentType":"1","address":"752
+        Jean Louise Circle","address_2":"","addr2_edit":"","city_name":"CENTRAL
+        POINT","state_name":"OR","zip_code":"97502","nonweighted_hs_gpa":3.7,"sat_score":0,"act_score":0,"college":"University
+        of
+        Oregon","cappex_major_id":null,"ranker":"1"},{"date":"2023-05-18T00:00:00.000Z","lead_id":12289842,"client_id":12375645,"ipeds_id":221892,"cid":436110,"f_name":"Owen","l_name":"Yeung","email_address":"owenyeung24@gmail.com","birth_month":"10","birth_date":"10","birth_year":2005,"country_id":"US","gender":"Male","hs_grad_month":"6","hs_grad_year":2024,"studentType":"1","address":"112
+        Olympus
+        Dr","address_2":"","addr2_edit":"","city_name":"Ocoee","state_name":"FL","zip_code":"34761","nonweighted_hs_gpa":3.68,"sat_score":1140,"act_score":1,"college":"Trevecca
+        Nazarene
+        University","cappex_major_id":null,"ranker":"1"},{"date":"2023-05-18T00:00:00.000Z","lead_id":12289889,"client_id":12375692,"ipeds_id":232186,"cid":419766,"f_name":"Amelia","l_name":"Windham","email_address":"miagwindham@gmail.com","birth_month":"12","birth_date":"12","birth_year":2006,"country_id":"US","gender":"Female","hs_grad_month":"6","hs_grad_year":2025,"studentType":"1","address":"920
+        Bendleton
+        Drive","address_2":"","addr2_edit":"","city_name":"WOODSTOCK","state_name":"GA","zip_code":"30188","nonweighted_hs_gpa":4,"sat_score":0,"act_score":0,"college":"George
+        Mason University","cappex_major_id":null,"ranker":"1"}]
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return formatDataAsArray(data)
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - workflowBlockPluginId: null
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-11-14T14:33:58.092Z
+blockData:
+  top: 48
+  left: 48
+  uuid: cb0c6592-d645-4eb4-9ab6-42a09dcfba6a
+  comment:
+    body: ''
+    visible: false
+    pluginId: startTrigger-comment
+  options: {}
+  pluginId: startTrigger
+  blockType: webhook
+  editorType: JavascriptQuery
+  isMinimized: false
+  resourceName: webhook
+  responseHeight: 658
+  retryPanelOpen: false
+  responsePanelState: open
+  incomingOnSuccessEdges: []

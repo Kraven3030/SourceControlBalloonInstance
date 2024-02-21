@@ -1,0 +1,110 @@
+id: cappex_api_call
+type: datasource
+subtype: RESTQuery
+resourceName: REST-WithoutResource
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - body: >-
+        [{"key":"AFID","value":"419486"},{"key":"CID","value":"{{value.cid}}"},{"key":"f_name","value":"{{value.f_name}}"},{"key":"l_name","value":"{{value.l_name}}"},{"key":"gender","value":"{{value.gender}}"},{"key":"b_year","value":"{{value.birth_year}}"},{"key":"b_month","value":"{{value.birth_month}}"},{"key":"b_date","value":"{{value.birth_date}}"},{"key":"address","value":"{{value.address}}"},{"key":"city_name","value":"{{value.city_name}}"},{"key":"state_name","value":"{{value.state_name}}"},{"key":"zip_code","value":"{{value.zip_code}}"},{"key":"country_id","value":"{{value.country_id}}"},{"key":"hs_grad_month","value":"{{value.hs_grad_month}}"},{"key":"hs_grad_year","value":"{{value.hs_grad_year}}"},{"key":"nonweighted_hs_gpa","value":"{{value.nonweighted_hs_gpa}}"},{"key":"college_considering","value":"{{value.ipeds_id}}"},{"key":"test","value":"yes"},{"key":"studentType","value":"{{value.studentType}}"},{"key":"major","value":"{{value.cappex_major_id}}"},{"key":"email_address","value":"{{value.email_address}}"}]
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: '[{"key":"Content-Type","value":"application/json"}]'
+    - workflowRunId: null
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: http://cappex.linktrustleadgen.com/Lead/{{value.cid}}/SimplePost
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - cookies: ''
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - version: 1
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return formatDataAsArray(data)
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - type: POST
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - workflowBlockPluginId: null
+    - bodyType: json
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2023-11-14T15:00:30.501Z
+blockData:
+  top: 656
+  left: 48
+  uuid: 66d12290-12b0-4bc0-b35f-aef6e53820b0
+  options:
+    parameters:
+      - id: 848aa1a4-5c9f-4640-bdc8-a06a7069475a
+        name: value
+        exampleValue: >-
+          {"date":"2023-05-18T00:00:00.000Z","lead_id":12288212,"client_id":12374015,"ipeds_id":232186,"cid":419766,"f_name":"Nolan","l_name":"Mays","email_address":"nolanmays02@gmail.com","birth_month":"09","birth_date":"17","birth_year":2006,"country_id":"US","gender":"Male","hs_grad_month":"6","hs_grad_year":2025,"studentType":"1","address":"1405
+          water hill
+          dr","address_2":"","addr2_edit":"","city_name":"columbia","state_name":"SC","zip_code":"29212","nonweighted_hs_gpa":4,"sat_score":0,"act_score":0,"college":"George
+          Mason University","cappex_major_id":null,"ranker":"1"}
+  pluginId: cappex_api_call
+  blockType: function
+  editorType: RESTQuery
+  resourceName: REST-WithoutResource
+  responsePanelState: open
+  incomingOnSuccessEdges: []
