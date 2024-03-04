@@ -1,0 +1,363 @@
+id: table1
+type: widget
+subtype: TableWidget2
+template:
+  ordered:
+    - selectedRowKey: null
+    - _nextAfterCursor: ''
+    - _columnBackgroundColor:
+        ordered:
+          - '37639': ''
+          - 3ab1a: ''
+          - c3ce9: ''
+    - _defaultSort: null
+    - _clearChangesetOnSave: true
+    - heightType: fixed
+    - _columnTextColor:
+        ordered: []
+    - disableEdits: false
+    - autoColumnWidth: false
+    - _rowHeight: medium
+    - _columnIds:
+        - 24dbf
+        - '37639'
+        - 3ab1a
+        - c3ce9
+    - _isSaving: false
+    - _actionIds: []
+    - _clearChangeset: false
+    - caseSensitiveFiltering: false
+    - _limitOffsetRowCount: null
+    - selectedSourceRow: null
+    - _dynamicColumnsEnabled: false
+    - disableSave: false
+    - _columnEditableOptions:
+        ordered:
+          - '37639':
+              ordered:
+                - allowCustomValue: true
+          - 3ab1a:
+              ordered:
+                - showStepper: true
+          - c3ce9:
+              ordered: []
+    - _toolbarPosition: bottom
+    - _groupByColumns: []
+    - _toolbarButtonLabel:
+        ordered:
+          - 1a: Filter
+          - 3c: Download
+          - 4d: Refresh
+    - _nextBeforeCursor: ''
+    - _persistRowSelection: false
+    - _toolbarButtonIcon:
+        ordered:
+          - 1a: bold/interface-text-formatting-filter-2
+          - 3c: bold/interface-download-button-2
+          - 4d: bold/interface-arrows-round-left
+    - changesetArray:
+        array: []
+    - _toolbarButtonType:
+        ordered:
+          - 1a: filter
+          - 3c: custom
+          - 4d: custom
+    - _columnStatusIndicator:
+        ordered: []
+    - _columnOptionList:
+        ordered:
+          - '37639':
+              ordered:
+                - mode: mapped
+                - mappedData: '{{ listFields.value?.[0]?.dropdownOptions }}'
+          - 3ab1a:
+              ordered: []
+          - c3ce9:
+              ordered: []
+    - _columnValueOverride:
+        ordered:
+          - '37639': '{{ self.data[i]?.[listFields.value?.[0]?.id] }}'
+          - 24dbf: '{{ self.data[i]?.[listFields.value?.[0]?.id] }}'
+          - 3ab1a: '{{ self.data[i]?.[listFields.value?.[0]?.id] }}'
+          - c3ce9: >-
+              <div style="padding:3px
+              7px;background-color:#07503e;color:white;border-radius:5px">{{
+              self.data[i]?.[listFields.value?.[3]?.id]?.distance ?
+              strFromTemplate("${distance} km by ${by}",
+              self.data[i]?.[listFields.value?.[3]?.id]).replace(/\*\*([^*]+)\*\*/g,
+              '<b>$1</b>') : "No Results" }}</div>
+    - marginType: normal
+    - _showBorder: true
+    - _templatePageSize: null
+    - _dynamicColumnProperties:
+        ordered: []
+    - _showHeader: true
+    - _currentPage: 0
+    - _columnKey:
+        ordered:
+          - '37639': ''
+          - 3ab1a: ''
+          - c3ce9: ''
+    - hidden: false
+    - _toolbarButtonIds:
+        - 1a
+        - 3c
+        - 4d
+    - data: '{{ listData.value }}'
+    - _cellSelection: none
+    - _serverPaginated: false
+    - _linkedFilterId: null
+    - searchMode: fuzzy
+    - _columnCellTooltip:
+        ordered:
+          - '37639': ''
+          - 3ab1a: ''
+          - c3ce9: ''
+    - _columnFormat:
+        ordered:
+          - '37639': tag
+          - 24dbf: string
+          - 3ab1a: decimal
+          - c3ce9: html
+    - _cursorCache:
+        object: {}
+    - _calculatedPageSize: null
+    - _primaryKeyColumnId: ''
+    - selectedDataIndex: null
+    - _columnAlignment:
+        ordered:
+          - '37639': left
+          - 24dbf: left
+          - 3ab1a: right
+          - c3ce9: left
+    - _actionIcon:
+        ordered: []
+    - _columnTooltip:
+        ordered:
+          - '37639': ''
+          - 3ab1a: ''
+          - c3ce9: ''
+    - _columnIcon:
+        ordered:
+          - '37639': ''
+          - 3ab1a: ''
+          - c3ce9: ''
+    - _alwaysShowRowSelectionCheckboxes: false
+    - _columnCellTooltipMode:
+        ordered:
+          - '37639': ''
+          - 3ab1a: ''
+          - c3ce9: ''
+    - _pageSize: null
+    - showInEditor: false
+    - selectedSourceRows:
+        array: []
+    - _enableExpandableRows: false
+    - _selectMultipleRowsOnActionClick: 'no'
+    - _columnSortDisabled:
+        ordered:
+          - '37639': false
+          - 3ab1a: false
+          - c3ce9: false
+    - _showSummaryRow: false
+    - filterStack: null
+    - _expandedRows: null
+    - changesetObject: null
+    - _actionDisabled:
+        ordered: []
+    - _columnReferenceId:
+        ordered:
+          - '37639': >
+              {{ listFields.value?.[0]?.type=="Dropdown" ?
+              listFields.value[0].id : "Dropdown[0]" }}
+          - 24dbf: >-
+              {{ listFields.value?.[0]?.type=="Text" ? listFields.value[0].id :
+              "Text[0]" }}
+          - 3ab1a: >-
+              {{ listFields.value?.[0]?.type=="Number" ? listFields.value[0].id
+              : "Number[0]" }}
+          - c3ce9: >-
+              {{ listFields.value?.[0]?.type=="Freight" ? listFields.value[0].id
+              : "Freight[0]" }}
+    - _dynamicColumnSource:
+        array: []
+    - _rowSelection: single
+    - _columnCaption:
+        ordered:
+          - '37639': ''
+          - 3ab1a: ''
+          - c3ce9: ''
+    - _dynamicColumnFormatOptions:
+        ordered: []
+    - _dynamicRowHeights: false
+    - _columnFormatOptions:
+        ordered:
+          - '37639':
+              ordered:
+                - automaticColors: true
+          - 24dbf:
+              ordered:
+                - automaticColors: true
+          - 3ab1a:
+              ordered:
+                - showSeparators: true
+                - notation: standard
+          - c3ce9:
+              ordered: []
+    - _changeset: null
+    - _afterCursor: ''
+    - selectedRowKeys:
+        array: []
+    - _beforeCursor: ''
+    - _columnSummaryAggregationMode:
+        ordered:
+          - '37639': none
+          - 24dbf: none
+          - 3ab1a: none
+          - c3ce9: none
+    - searchTerm: ''
+    - selectedRows:
+        array: []
+    - _disabledVirtualization: false
+    - _expandedRowDataIndexes:
+        array: []
+    - _showColumnBorders: false
+    - _columnStatusIndicatorOptions:
+        ordered:
+          - '37639':
+              ordered: []
+          - 3ab1a:
+              ordered: []
+          - c3ce9:
+              ordered: []
+    - _columnSize:
+        ordered:
+          - '37639': 93.5
+          - 24dbf: 57.8125
+          - 3ab1a: 79.890625
+          - c3ce9: 74.5625
+    - _serverPaginationType: limitOffsetBased
+    - _columnSortMode:
+        ordered: []
+    - _selectSingleRowsOnActionClick: replace
+    - _showFooter: true
+    - _groupedColumnConfig:
+        ordered: []
+    - _dynamicColumnSize:
+        ordered: []
+    - _virtualizeStartIndex: 0
+    - _toolbarButtonHidden:
+        ordered: []
+    - _defaultFilters:
+        ordered: []
+    - events:
+        - ordered:
+            - targetId: c3ce9
+            - event: clickCell
+            - method: confetti
+            - params:
+                ordered: []
+            - pluginId: ''
+            - type: util
+            - waitMs: '0'
+            - waitType: debounce
+        - ordered:
+            - targetId: 3c
+            - event: clickToolbar
+            - method: exportData
+            - pluginId: table1
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+        - ordered:
+            - targetId: 4d
+            - event: clickToolbar
+            - method: refresh
+            - pluginId: table1
+            - type: widget
+            - waitMs: '0'
+            - waitType: debounce
+    - _columnEditable:
+        ordered:
+          - '37639': ''
+          - 3ab1a: ''
+          - c3ce9: ''
+    - _rowBackgroundColor:
+        array: []
+    - emptyMessage: ''
+    - pagination: null
+    - selectedDataIndexes:
+        array: []
+    - _columnGroupAggregationMode:
+        ordered:
+          - '37639': none
+          - 24dbf: none
+          - 3ab1a: sum
+          - c3ce9: none
+    - sortArray:
+        array: []
+    - _selectedCell: null
+    - overflowType: scroll
+    - selectedCell: null
+    - _defaultSelectedRow:
+        ordered:
+          - mode: index
+          - indexType: display
+          - index: 0
+    - _hasNextPage: false
+    - _includeRowInChangesetArray: false
+    - _columnPosition:
+        ordered:
+          - '37639': center
+          - 24dbf: center
+          - 3ab1a: center
+          - c3ce9: center
+    - _enableSaveActions: true
+    - _columnPlaceholder:
+        ordered:
+          - '37639': Select option
+          - 24dbf: Enter value
+          - 3ab1a: Enter value
+          - c3ce9: Enter value
+    - _defaultFilterOperator: and
+    - _actionLabel:
+        ordered: []
+    - _virtualizeEndIndex: 0
+    - selectedRow: null
+    - _actionHidden:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+    - _columnHidden:
+        ordered:
+          - '37639': 'false'
+          - 24dbf: '{{ listFields.value?.[0]?.type!=="Text" }}'
+          - 3ab1a: 'false'
+          - c3ce9: 'false'
+    - _columnLabel:
+        ordered:
+          - '37639': >-
+              {{ listFields.value?.[0]?.type=="Dropdown" ?
+              listFields.value?.[0]?.name?.[localStorage.values.language] :
+              "Dropdown[0]" }}
+          - 24dbf: >-
+              {{ listFields.value?.[0]?.type=="Text" ?
+              listFields.value?.[0]?.name?.[localStorage.values.language] :
+              "Text[0]" }}
+          - 3ab1a: >-
+              {{ listFields.value?.[0]?.type=="Number" ?
+              listFields.value?.[0]?.name?.[localStorage.values.language] :
+              "Number[0]" }}
+          - c3ce9: >-
+              {{ listFields.value?.[0]?.type=="Freight" ?
+              listFields.value?.[0]?.name?.[localStorage.values.language] :
+              "Freight[0]" }}
+    - _showToolbar: true
+style:
+  ordered: []
+position2:
+  position2:
+    row: 1.2
+    col: 2
+    height: 8
+    width: 8
+createdAt: 2024-01-04T16:32:12.925Z
