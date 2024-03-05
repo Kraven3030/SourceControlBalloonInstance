@@ -1,0 +1,42 @@
+id: button1
+uuid: d3ed956b-0952-4833-acc6-04eac258b792
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: ''
+    - marginType: normal
+    - hidden: false
+    - text: Button
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: widget
+            - method: clearValidation
+            - pluginId: textInput1
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 3.6
+    col: 3
+    height: 1
+    width: 1
+createdAt: 2024-02-22T22:26:40.924Z

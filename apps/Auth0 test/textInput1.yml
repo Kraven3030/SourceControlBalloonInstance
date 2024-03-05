@@ -1,0 +1,65 @@
+id: textInput1
+uuid: 6f96e9d5-2cb1-4b8a-8f53-574629a7641d
+type: widget
+subtype: TextInputWidget2
+template:
+  ordered:
+    - spellCheck: false
+    - readOnly: false
+    - iconAfter: ''
+    - showCharacterCount: false
+    - autoComplete: false
+    - marginType: normal
+    - maxLength: null
+    - hidden: false
+    - customValidation: ''
+    - patternType: ''
+    - hideValidationMessage: false
+    - textBefore: ''
+    - validationMessage: ''
+    - textAfter: ''
+    - showInEditor: false
+    - showClear: false
+    - pattern: ''
+    - tooltipText: ''
+    - labelAlign: left
+    - formDataKey: '{{ self.id }}'
+    - value: ''
+    - labelCaption: ''
+    - labelWidth: '33'
+    - autoFill: ''
+    - placeholder: Ask AI
+    - label: Label
+    - _validate: false
+    - labelWidthUnit: '%'
+    - invalid: false
+    - iconBefore: ''
+    - minLength: null
+    - inputTooltip: ''
+    - events:
+        - ordered:
+            - event: submit
+            - type: datasource
+            - method: trigger
+            - pluginId: query2
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - autoCapitalize: none
+    - loading: false
+    - disabled: false
+    - labelPosition: top
+    - labelWrap: false
+    - maintainSpaceWhenHidden: false
+    - required: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 1.6000000000000014
+    col: 2
+    height: 1
+    width: 4
+createdAt: 2024-02-22T22:26:50.840Z
