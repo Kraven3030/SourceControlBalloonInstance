@@ -1,0 +1,13 @@
+id: listData
+type: state
+subtype: State
+template:
+  ordered:
+    - _persistedValueGetter: null
+    - _persistedValueSetter: null
+    - persistValue: false
+    - persistedValueKey: ''
+    - value: "[{\n\t\"name\":\"Cooper\",\n\t\"type\":\"metal\",\n\t\"quantity\":12,\n\t\"freight\":{distance:123,by:\"Truck\"}\n},{\n\t\"name\":\"Cooper\",\n\t\"type\":\"metal\",\n\t\"quantity\":12,\n\t\"freight\":{distance:123,by:\"Truck\"}\n},{\n\t\"name\":\"Cooper\",\n\t\"type\":\"metal\",\n\t\"quantity\":12,\n\t\"freight\":{distance:123,by:\"Truck\"}\n}]"
+style:
+  ordered: []
+createdAt: 2024-01-05T22:47:31.370Z
