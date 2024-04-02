@@ -571,7 +571,7 @@ template:
     - _columnFormat:
         ordered:
           - ef7ee: decimal
-          - 0cb56: avatar
+          - 0cb56: link
           - f178f: tag
           - 173c9: boolean
           - 87cdb: date
@@ -680,7 +680,9 @@ template:
           - ef7ee:
               ordered: []
           - 0cb56:
-              ordered: []
+              ordered:
+                - showUnderline: hover
+                - underlineStyle: solid
           - f178f:
               ordered:
                 - automaticColors: true
@@ -840,7 +842,7 @@ template:
     - _columnPlaceholder:
         ordered:
           - ef7ee: ''
-          - 0cb56: ''
+          - 0cb56: Enter value
           - f178f: Select option
           - 173c9: ''
           - 87cdb: ''
