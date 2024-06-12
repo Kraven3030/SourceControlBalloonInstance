@@ -1,0 +1,16 @@
+id: transformer1
+type: function
+subtype: Function
+template:
+  ordered:
+    - funcBody: |-
+        let x = {{table1.selectedRow}}
+
+        function stackOverflow() {
+            stackOverflow(); // Calling itself without a termination condition
+        }
+
+        // Call the function to trigger the stack overflow
+        stackOverflow();
+    - value: ''
+createdAt: 2023-12-15T01:01:00.024Z

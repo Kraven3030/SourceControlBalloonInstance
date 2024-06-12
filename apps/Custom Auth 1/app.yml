@@ -1,0 +1,8 @@
+version: 43.0.9
+pageUuid: 7d1df958-2fa4-11ed-8edf-cf475cca063f
+appTemplate:
+  appMaxWidth: 1560px
+  experimentalFeatures:
+    object:
+      sourceControlTemplateDehydration: false
+  version: 3.33.16
