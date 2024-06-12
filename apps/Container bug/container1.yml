@@ -13,7 +13,6 @@ template:
     - clickable: false
     - _iconByIndex:
         - ''
-    - headerPadding: 4px 12px
     - showFooterBorder: true
     - marginType: normal
     - enableFullBleed: false
@@ -27,7 +26,6 @@ template:
     - showInEditor: false
     - footerPaddingType: normal
     - tooltipText: ''
-    - padding: 12px
     - hiddenByIndex:
         array: []
     - _hiddenByIndex:
@@ -36,7 +34,6 @@ template:
     - _hasMigratedNestedItems: true
     - transition: none
     - showHeaderBorder: true
-    - footerPadding: 4px 12px
     - itemMode: static
     - _tooltipByIndex:
         - ''
