@@ -1,0 +1,99 @@
+id: query7
+type: datasource
+subtype: DynamoQuery
+resourceName: ff77fac3-c765-48f4-a294-6bd094aca69c
+resourceDisplayName: DynamoDB [Share]
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - UpdateExpression: SET name = :n
+    - method: updateItem
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - ExpressionAttributeNames: '{"#name": ":n"}'
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - ExpressionAttributeValues: '{":n": ''Banana'' }'
+    - runWhenModelUpdates: false
+    - autoPaginate: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - ProjectionExpression: ''
+    - query: ''
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - table: support
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - FilterExpression: ''
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - ConditionExpression: ''
+    - Item: '{}'
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: ''
+    - watchedParams: []
+    - KeyConditionExpression: ''
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - isTableFieldRawInput: false
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - customParameters: '{}'
+    - changesetIsObject: false
+    - Limit: ''
+    - enableCaching: false
+    - Select: ''
+    - allowedGroups: []
+    - IndexName: ''
+    - usingCustomParameters: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - Key: '{id:177}'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-04-08T22:13:26.372Z

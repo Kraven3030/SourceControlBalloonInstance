@@ -1,0 +1,43 @@
+id: button2
+uuid: bc1532f3-dba3-47bf-a6e4-e068b5d7e15a
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - heightType: fixed
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - hidden: false
+    - ariaLabel: ''
+    - text: Button
+    - margin: 4px 8px
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: query13
+            - targetId: null
+            - params:
+                ordered: []
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 9.4
+    height: 1
+    width: 2
+createdAt: 2024-06-13T22:35:49.559Z

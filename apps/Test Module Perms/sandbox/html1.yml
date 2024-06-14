@@ -1,0 +1,33 @@
+id: html1
+uuid: 9ef57b2d-f21e-4a20-a126-4291e6919500
+type: widget
+subtype: HTMLWidget
+template:
+  ordered:
+    - clickable: false
+    - css: |-
+        .line {
+          border-left: 1px solid;
+          height: 500px;
+          position: absolute;
+          left: 50%;
+          top: 0;
+        }
+    - marginType: normal
+    - hidden: false
+    - html: <div class='line'></div>
+    - margin: 4px 8px
+    - showInEditor: false
+    - tooltipText: ''
+    - events:
+        ordered: []
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 44.2
+    col: 10
+    height: 0.2
+    width: 2
+createdAt: 2024-05-07T23:34:08.348Z

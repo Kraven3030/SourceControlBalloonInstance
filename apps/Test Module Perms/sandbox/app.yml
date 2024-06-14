@@ -1,0 +1,10 @@
+version: 43.0.9
+pageUuid: bc67ea84-7a98-11ee-97c2-7317f8b18a62
+appTemplate:
+  notificationsSettings:
+    object:
+      globalQueryShowFailureToast: true
+      globalQueryShowSuccessToast: false
+      globalQueryToastDuration: 4.5
+  version: 3.52.1
+  experimentalDataTabEnabled: true

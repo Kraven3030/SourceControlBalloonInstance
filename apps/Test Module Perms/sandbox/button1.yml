@@ -1,0 +1,48 @@
+id: button1
+uuid: 4a5cefe6-336d-4681-84ae-9dd29886fcc4
+type: widget
+subtype: ButtonWidget2
+template:
+  ordered:
+    - heightType: fixed
+    - horizontalAlign: stretch
+    - clickable: false
+    - iconAfter: ''
+    - submitTargetId: null
+    - marginType: normal
+    - hidden: false
+    - ariaLabel: ''
+    - text: Button
+    - margin: 4px 8px
+    - showInEditor: false
+    - tooltipText: ''
+    - styleVariant: solid
+    - submit: false
+    - iconBefore: ''
+    - events:
+        - ordered:
+            - event: click
+            - type: datasource
+            - method: trigger
+            - pluginId: downloadChart
+            - targetId: null
+            - params:
+                ordered:
+                  - options:
+                      object:
+                        onSuccess: null
+                        onFailure: null
+                        additionalScope: null
+            - waitType: debounce
+            - waitMs: '0'
+    - loading: false
+    - loaderPosition: auto
+    - disabled: false
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 61
+    height: 1.4
+createdAt: 2024-03-22T22:22:36.004Z

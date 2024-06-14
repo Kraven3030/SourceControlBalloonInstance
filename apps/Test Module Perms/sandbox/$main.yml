@@ -1,0 +1,15 @@
+id: $main
+type: frame
+subtype: Frame
+template:
+  ordered:
+    - type: main
+    - sticky: null
+    - paddingType: normal
+    - enableFullBleed: false
+    - isHiddenOnDesktop: false
+    - isHiddenOnMobile: false
+    - padding: 8px 12px
+style:
+  ordered: []
+createdAt: 2023-11-03T22:35:00.800Z

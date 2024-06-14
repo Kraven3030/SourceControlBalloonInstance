@@ -1,0 +1,28 @@
+id: containerTitle1
+uuid: 33130226-9828-428f-a596-76ca2168bb01
+type: widget
+subtype: TextWidget2
+template:
+  ordered:
+    - heightType: auto
+    - horizontalAlign: left
+    - marginType: normal
+    - hidden: false
+    - imageWidth: fit
+    - margin: 4px 8px
+    - showInEditor: false
+    - verticalAlign: center
+    - tooltipText: ''
+    - value: '#### Container title'
+    - disableMarkdown: false
+    - overflowType: scroll
+    - maintainSpaceWhenHidden: false
+style:
+  ordered: []
+position2:
+  position2:
+    container: container1
+    rowGroup: header
+    height: 0.6
+    width: 12
+createdAt: 2024-05-02T23:24:48.310Z
