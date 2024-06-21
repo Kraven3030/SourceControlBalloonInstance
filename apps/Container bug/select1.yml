@@ -1,5 +1,5 @@
 id: select1
-uuid: 36fff54f-02d3-43d8-9ed0-301338b84b90
+uuid: 8cc6f261-cbb0-4a85-87c7-18cdab169583
 type: widget
 subtype: SelectWidget2
 template:
@@ -20,7 +20,6 @@ template:
     - values:
         array: []
     - readOnly: false
-    - clearInputValueOnChange: false
     - iconAfter: ''
     - _iconByIndex:
         - ''
@@ -29,6 +28,7 @@ template:
     - overlayMinWidth: null
     - allowDeselect: false
     - inputValue: ''
+    - marginType: normal
     - hidden: false
     - customValidation: ''
     - data:
@@ -44,7 +44,6 @@ template:
         - ''
     - selectedItem: null
     - validationMessage: ''
-    - margin: 4px 8px
     - automaticItemColors: false
     - itemAdornmentShape: circle
     - textAfter: ''
@@ -97,9 +96,9 @@ template:
     - events:
         ordered: []
     - _ids:
-        - 2b841
-        - c948a
-        - fe299
+        - 196df
+        - 89a87
+        - cc5c4
     - emptyMessage: No options
     - overlayMaxHeight: 375
     - loading: false
@@ -129,4 +128,4 @@ position2:
     row: 0.8
     height: 0.2
     width: 4
-createdAt: 2024-06-21T16:01:12.660Z
+createdAt: 2024-06-21T23:28:03.506Z
