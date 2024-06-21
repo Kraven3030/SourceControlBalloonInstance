@@ -7,5 +7,5 @@ appTemplate:
       globalQueryShowSuccessToast: true
       globalQueryToastDuration: 4.5
   shortlink: false
-  version: 3.33.29
+  version: 3.52.1
   experimentalDataTabEnabled: true

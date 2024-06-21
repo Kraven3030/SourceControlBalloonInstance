@@ -22,6 +22,7 @@ template:
     - showHeader: true
     - hoistFetching: false
     - paddingType: normal
+    - margin: 4px 8px
     - views:
         array: []
     - showInEditor: false

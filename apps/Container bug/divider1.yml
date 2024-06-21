@@ -4,14 +4,15 @@ type: widget
 subtype: DividerWidget
 template:
   ordered:
-    - hidden: false
-    - maintainSpaceWhenHidden: false
-    - showInEditor: false
-    - marginType: normal
-    - tooltipText: ''
     - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
     - text: ''
+    - margin: 4px 8px
     - textSize: default
+    - showInEditor: false
+    - tooltipText: ''
+    - maintainSpaceWhenHidden: false
 style:
   ordered: []
 position2:

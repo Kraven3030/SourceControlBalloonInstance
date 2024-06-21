@@ -1,14 +1,14 @@
 id: text1
-uuid: 63eb667c-c2d1-48b0-be2b-0b2a99a70f06
+uuid: f51711d1-36b5-4675-8f13-3a45e944e9b7
 type: widget
 subtype: TextWidget2
 template:
   ordered:
     - heightType: auto
     - horizontalAlign: left
-    - marginType: normal
     - hidden: false
     - imageWidth: fit
+    - margin: 4px 8px
     - showInEditor: false
     - verticalAlign: center
     - tooltipText: ''
@@ -20,7 +20,7 @@ style:
   ordered: []
 position2:
   position2:
-    row: 1.2
-    col: 3
+    row: 2.2
+    col: 4
     height: 0.6
-createdAt: 2024-06-12T16:29:40.256Z
+createdAt: 2024-06-21T15:29:18.089Z
