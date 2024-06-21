@@ -1,0 +1,127 @@
+id: navigation1
+uuid: 3e6bf0b0-d2f5-40cf-9b5f-15cf0d3b5916
+type: widget
+subtype: NavigationWidget2
+template:
+  ordered:
+    - _disabledByIndex:
+        - ''
+        - ''
+        - ''
+    - heightType: auto
+    - retoolStorageShowLegacyFiles: false
+    - iconByIndex:
+        array: []
+    - srcWidth: null
+    - _iconByIndex:
+        - ''
+        - ''
+        - ''
+    - src: https://blaker.retool.dev/83d4d9a1f1ecd17d111e6b4a014043cd.svg
+    - overflowMode: scroll
+    - _parentKeyByIndex:
+        - ''
+        - ''
+        - ''
+    - retoolFileObject:
+        object: {}
+    - _highlightByIndex:
+        - ''
+        - ''
+        - ''
+    - parentKeyByIndex:
+        array: []
+    - retoolStorageFileId: ''
+    - highlightByIndex:
+        array: []
+    - _appTargetByIndex:
+        - ''
+        - ''
+        - ''
+    - marginType: normal
+    - appTargetByIndex:
+        array: []
+    - hidden: false
+    - data:
+        array: []
+    - srcHeight: null
+    - itemTypeByIndex:
+        array: []
+    - showInEditor: false
+    - _itemTypeByIndex:
+        - ''
+        - ''
+        - ''
+    - orientation: horizontal
+    - tooltipText: ''
+    - hiddenByIndex:
+        array: []
+    - _hiddenByIndex:
+        - ''
+        - ''
+        - ''
+    - storageBlobId: ''
+    - _captionByIndex:
+        - ''
+        - ''
+        - ''
+    - _hasMigratedNestedItems: true
+    - captionByIndex:
+        array: []
+    - altText: ''
+    - itemMode: static
+    - dbBlobId: ''
+    - _tooltipByIndex:
+        - ''
+        - ''
+        - ''
+    - _automaticallyHighlightedIndices:
+        array: []
+    - tooltipByIndex:
+        array: []
+    - events:
+        ordered: []
+    - _ids:
+        - c0825
+        - d3358
+        - '05995'
+    - iconPositionByIndex:
+        array: []
+    - _iconPositionByIndex:
+        - ''
+        - ''
+        - ''
+    - retoolStorageDynamicInput: false
+    - _keyByIndex:
+        - ''
+        - ''
+        - ''
+    - disabled: false
+    - keyByIndex:
+        array: []
+    - _labels:
+        - Menu item 1
+        - Menu item 2
+        - Menu item 3
+    - screenTargetByIndex:
+        array: []
+    - srcType: src
+    - _screenTargetByIndex:
+        - ''
+        - ''
+        - ''
+    - disabledByIndex:
+        array: []
+    - horizontalAlignment: left
+    - maintainSpaceWhenHidden: false
+    - labels:
+        array: []
+style:
+  ordered: []
+position2:
+  position2:
+    row: 17
+    col: 2
+    height: 1
+    width: 10
+createdAt: 2024-06-21T23:31:58.174Z

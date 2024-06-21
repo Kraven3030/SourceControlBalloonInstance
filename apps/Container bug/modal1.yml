@@ -1,0 +1,26 @@
+id: modal1
+uuid: 7a13c0ac-a453-4a63-be69-bc944d2d8dde
+type: widget
+subtype: ModalWidget
+template:
+  ordered:
+    - opened: false
+    - modalOverflowType: scroll
+    - onModalClose: ''
+    - modalHeightType: fixed
+    - tooltipText: ''
+    - modalHeight: ''
+    - onModalOpen: ''
+    - modalWidth: ''
+    - closeOnOutsideClick: false
+    - loading: ''
+    - disabled: ''
+    - buttonText: Open Modal
+style:
+  ordered: []
+position2:
+  position2:
+    row: 8
+    col: 9
+    height: 1
+createdAt: 2024-06-21T23:31:54.081Z
