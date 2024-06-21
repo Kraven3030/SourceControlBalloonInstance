@@ -4,21 +4,22 @@ type: widget
 subtype: DividerWidget
 template:
   ordered:
-    - hidden: false
-    - maintainSpaceWhenHidden: false
-    - showInEditor: false
-    - marginType: normal
-    - tooltipText: ''
     - horizontalAlign: center
+    - marginType: normal
+    - hidden: false
     - text: ''
+    - margin: 4px 8px
     - textSize: default
+    - showInEditor: false
+    - tooltipText: ''
+    - maintainSpaceWhenHidden: false
 style:
   ordered: []
 position2:
   position2:
     container: container1
     subcontainer: b627e
-    row: 0.9999999999999999
+    row: 0.19999999999999984
     height: 0.2
     width: 4
 createdAt: 2024-04-02T22:11:34.862Z

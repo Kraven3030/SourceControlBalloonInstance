@@ -17,6 +17,7 @@ template:
     - hideValidationMessage: false
     - textBefore: ''
     - validationMessage: ''
+    - margin: 4px 8px
     - textAfter: ''
     - showInEditor: false
     - showClear: false
@@ -51,7 +52,7 @@ position2:
   position2:
     container: container1
     subcontainer: b627e
-    row: 1.2
+    row: 0.3999999999999999
     height: 1
     width: 4
 createdAt: 2024-04-02T22:10:49.080Z
