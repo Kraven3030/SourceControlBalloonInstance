@@ -118,6 +118,7 @@ template:
           - de8fa: ''
           - 7726b: ''
           - 2455d: ''
+    - marginType: normal
     - _showBorder: true
     - _templatePageSize: null
     - _dynamicColumnProperties:
