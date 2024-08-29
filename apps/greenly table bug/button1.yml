@@ -1,14 +1,17 @@
 id: button1
+uuid: 1e4c3062-ad77-4ace-beca-e655d9b2460f
 type: widget
 subtype: ButtonWidget2
 template:
   ordered:
+    - heightType: fixed
     - horizontalAlign: stretch
     - clickable: false
     - iconAfter: ''
     - submitTargetId: null
     - hidden: false
     - text: Button
+    - margin: 4px 8px
     - showInEditor: false
     - tooltipText: ''
     - styleVariant: solid
@@ -24,7 +27,8 @@ style:
   ordered: []
 position2:
   position2:
-    row: 14.2
+    row: 17.6
     col: 5
     height: 1
-createdAt: 2024-03-04T22:27:56.342Z
+    width: 1
+createdAt: 2024-03-28T23:24:00.844Z
