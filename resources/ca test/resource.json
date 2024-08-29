@@ -1,0 +1,30 @@
+{
+  "type": "postgresql",
+  "host": "https://retoolapi.dev/vxoMNs/my_mock_postgres",
+  "port": "5432",
+  "databaseName": "websites1698591004085vvoyughpvklxmjjd",
+  "databaseUsername": "slxzahajhpikigqgrrefqakp@psql-mock-database-cloud",
+  "databasePassword": "",
+  "description": null,
+  "outboundRegion": null,
+  "ssl": true,
+  "editPrivilege": false,
+  "options": {
+    "authentication": "user_password",
+    "connectionString": "",
+    "queryEditorModes": { "allowGuiMode": true, "allowSqlMode": true },
+    "rejectUnauthorized": true,
+    "skipVerifyHostname": true,
+    "sshHost": "",
+    "sshPassword": "",
+    "sshPrivateKeyName": "",
+    "sshTunnelEnabled": false,
+    "sshUsername": "",
+    "userExplicitlySetRejectUnauthorized": true,
+    "version": "SqlQueryUnified"
+  },
+  "environment": "production",
+  "dynamicallyQueryable": false,
+  "uuid": "c21dabd9-3004-4113-b64f-b12fb5170c62",
+  "toolscriptVersion": "1.0.0"
+}
