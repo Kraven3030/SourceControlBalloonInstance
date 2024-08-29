@@ -1,0 +1,1 @@
+SELECT * FROM "tracked_property_usages" limit 1
