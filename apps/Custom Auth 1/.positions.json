@@ -1,0 +1,33 @@
+{
+  "button1": {
+    "row": 3.2,
+    "col": 5,
+    "height": 1,
+    "width": 1
+  },
+  "jsonEditor2": {
+    "row": 18.2,
+    "height": 9,
+    "width": 10
+  },
+  "jsonEditor3": {
+    "row": 36.2,
+    "height": 9,
+    "width": 10
+  },
+  "jsonEditor4": {
+    "row": 27.2,
+    "height": 9,
+    "width": 10
+  },
+  "numberInput1": {
+    "row": 2,
+    "height": 1,
+    "width": 4
+  },
+  "textInput1": {
+    "row": 4,
+    "height": 1,
+    "width": 4
+  }
+}
