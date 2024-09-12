@@ -1,7 +1,3 @@
 <App>
-  <Text
-    id="text1"
-    value="👋 **Hello {{ current_user.firstName || 'friend' }}!**"
-    verticalAlign="center"
-  />
+  <Include src="./src/defaultPage.rsx" />
 </App>
