@@ -1,7 +1,7 @@
 {
-  "text1": {
-    "row": 2.4,
-    "col": 1,
-    "height": 1
+  "table1": {
+    "row": 0.2,
+    "height": 8,
+    "width": 8
   }
 }
