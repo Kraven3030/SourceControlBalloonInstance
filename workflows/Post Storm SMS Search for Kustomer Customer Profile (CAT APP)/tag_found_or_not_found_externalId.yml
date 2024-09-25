@@ -1,0 +1,123 @@
+id: tag_found_or_not_found_externalId
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: >-
+        const profiles = tag_found_or_not_found_phone_number.data;
+
+        const kustomers_by_id_batched =
+        post_kustomer_customers_search_by_id.data.map(item => item?.data);
+
+        const policy_map = new Map();
+
+
+        kustomers_by_id_batched.forEach(batch => {
+          batch?.forEach(kustomer => {
+            const externalId = kustomer.attributes.externalId.toString();
+            if(externalId) {
+              policy_map.set(externalId, {kustomer_policyNumberStr: kustomer.attributes.custom?.policyIdStr, id: kustomer.id});//Map each externalId as a key that accesses these other desired values.
+            }
+          });
+        });
+
+
+        profiles.forEach(profile => {
+          const customer = policy_map.get(profile.externalids.toString());
+          profile.customer_externalid_found = !!customer; //Cast object into a Boolean value, undefined=false. 
+          if(customer) {
+            //profile.kustomer_policyNumberStr_by_externalid = customer.kustomer_policyNumberStr;
+            profile.externalid_id=customer.id;
+          }
+        });
+
+
+        return profiles;
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-08-26T16:31:04.726Z
+blockData:
+  top: -896
+  left: 2096
+  uuid: 16351b35-a9b3-4451-9845-4c3e692dc100
+  comment:
+    body: ''
+    visible: false
+    pluginId: tag_found_or_not_found_externalId-comment
+  pluginId: tag_found_or_not_found_externalId
+  blockType: code
+  dimensions:
+    width: 816
+    height: 496
+  editorType: JavascriptQuery
+  isMinimized: false
+  resourceName: JavascriptQuery
+  responsePanelState: open
+  incomingOnSuccessEdges:
+    - 4e3320fa-4d71-4fb4-a904-6017eb0b44d1

@@ -1,0 +1,104 @@
+id: trigger_update_workflow
+type: datasource
+subtype: RESTQuery
+resourceName: REST-WithoutResource
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - body: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: >-
+        [{"key":"X-Workflow-Api-Key","value":"retool_wk_7839ef2898b4466f98293d9cc1876631"}]
+    - workflowRunId: null
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: >-
+        https://api.retool.com/v1/workflows/05fd911d-46fc-4ded-a03a-c4de1d44f506/startTrigger?environment=staging
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - cookies: ''
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - version: 2
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - type: POST
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-09-05T19:27:46.534Z
+blockData:
+  top: -784
+  left: 7872
+  uuid: 89b1ee1c-4993-4d1d-b2a1-8ac1962f3802
+  comment:
+    body: >-
+      This will trigger if our dataset includes rows with operation='update'.
+      This workflow triggers the webhook workflow at the end of it
+    visible: true
+    pluginId: trigger_update_workflow-comment
+  pluginId: trigger_update_workflow
+  blockType: default
+  editorType: RESTQuery
+  resourceName: REST-WithoutResource
+  incomingPorts:
+    - portId: 5088f36a-6b74-4028-8e70-6322066a417e
+      blockId: b53ea327-5ee9-472f-85df-837dc664e182
+  incomingOnSuccessEdges: []

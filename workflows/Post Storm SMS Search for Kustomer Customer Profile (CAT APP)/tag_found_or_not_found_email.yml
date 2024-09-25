@@ -1,0 +1,123 @@
+id: tag_found_or_not_found_email
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: >-
+        const profiles = tag_found_or_not_found_externalId.data;
+
+        const kustomers_by_id_batched =
+        post_kustomer_customers_search_by_email.data.map(item => item?.data);
+
+        const policy_map = new Map();
+
+
+        kustomers_by_id_batched.forEach(batch => {
+          batch?.forEach(kustomer => {
+            const email = kustomer.attributes.emails[0].email.toString();
+            if(email) {
+              policy_map.set(email, {kustomer_policyNumberStr: kustomer.attributes.custom?.policyIdStr, id: kustomer.id});//Map each externalId as a key that accesses these other desired values.
+            }
+          });
+        });
+
+
+        profiles.forEach(profile => {
+          const customer = policy_map.get(profile.email.toString());
+          profile.customer_email_found = !!customer; //Cast object into a Boolean value, undefined=false. 
+          if(customer) {
+            //profile.kustomer_policyNumberStr_by_email = customer.kustomer_policyNumberStr;
+            profile.email_id=customer.id;
+          }
+        });
+
+
+        return profiles;
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-09-06T14:35:56.074Z
+blockData:
+  top: -896
+  left: 4048
+  uuid: 5b1fb2d4-65ad-4bf3-be2e-8803e6c3236f
+  comment:
+    body: ''
+    visible: false
+    pluginId: tag_found_or_not_found_externalId-comment
+  pluginId: tag_found_or_not_found_email
+  blockType: code
+  dimensions:
+    width: 816
+    height: 496
+  editorType: JavascriptQuery
+  isMinimized: false
+  resourceName: JavascriptQuery
+  responsePanelState: open
+  incomingOnSuccessEdges:
+    - e0dab381-55af-4f63-8137-7c86951a89ea

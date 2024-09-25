@@ -1,0 +1,133 @@
+id: format_operation_update
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: |
+        var batch_update = [];
+        const array_to_parse = update_and_webhook_profiles.data;
+        for (let j = 0; j < array_to_parse.length; j++) {
+          const row = array_to_parse[j];
+          /*
+          let kustomer_updated_policy_number = null;
+          if (row.operation === "update") {
+            kustomer_updated_policy_number =
+              row.kustomer_policyNumberStr_by_phone ||
+              row.kustomer_policyNumberStr_by_externalid ||
+              row.kustomer_policyNumberStr_by_email ||
+              null;
+          }
+          */
+          batch_update.push({
+            id: row.id,
+            operation: row.operation,
+            //kustomer_updated_policy_number: kustomer_updated_policy_number,
+            customer_found: row.customer_found,
+            kustomer_search_flag: row.kustomer_search_flag,
+            kustomer_customer_id_phone_search_result: row.customer_phone_found
+              ? row.phone_id
+              : null,
+            kustomer_customer_id_external_id_search_result:
+              row.customer_externalid_found ? row.externalid_id : null,
+            kustomer_customer_id_email_search_result: row.customer_email_found
+              ? row.email_id
+              : null,
+          });
+        }
+        //return batch_update;
+        const batchSize = 100; //300
+        var batches = [];
+        for (let i = 0; i < batch_update.length; i += batchSize) {
+          let batch = batch_update.slice(i, i + batchSize);
+          batches.push(batch);
+        }
+        return batches;
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-09-10T18:58:00.742Z
+blockData:
+  top: -784
+  left: 6384
+  uuid: 7eb5da5e-bb3c-4a9e-8cd8-19d87eaaa51e
+  comment:
+    body: ''
+    visible: false
+    pluginId: format_operation_update-comment
+  pluginId: format_operation_update
+  blockType: code
+  dimensions:
+    width: 544
+    height: 736
+  editorType: JavascriptQuery
+  resourceName: JavascriptQuery
+  incomingPorts:
+    - portId: a2fb2871-f21b-4fb4-b8f2-b49f4a7d8f16
+      blockId: bfeb7903-6263-4016-8ae0-99979b9aafaf
+  responsePanelState: open
+  incomingOnSuccessEdges: []
