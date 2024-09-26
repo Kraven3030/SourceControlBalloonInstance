@@ -1,0 +1,118 @@
+id: update_kustomer_table_create_operation
+type: datasource
+subtype: SqlQueryUnified
+resourceName: 9aa25924-1790-4fa0-b0a1-5d1daf399f6a
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - records: ''
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: |-
+        UPDATE
+          cas.post_storm_sms_kustomer_sent
+        SET
+          operation = 'create', --We will trigger the create workflow to create this customer
+          customer_found = false, --Customer not found during search
+          kustomer_search_flag = true --Customer was searched for
+        WHERE
+          id = ANY ({{ create_profiles.data.map(row=>row.id) }})
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - warningCodes: []
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - dataArray: []
+    - cacheKeyTtl: ''
+    - filterBy: ''
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - workflowActionType: null
+    - editorMode: sql
+    - queryRunTime: null
+    - actionType: ''
+    - changesetObject: ''
+    - shouldUseLegacySql: false
+    - errorTransformer: return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - databaseWarehouseOverride: ''
+    - enableBulkUpdates: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - bulkUpdatePrimaryKey: ''
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - tableName: ''
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - databaseUsernameOverride: ''
+    - databaseRoleOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-09-10T17:27:49.070Z
+blockData:
+  top: -1216
+  left: 6384
+  uuid: dec8e551-4a03-4154-973c-3cfb20143637
+  pluginId: update_kustomer_table_create_operation
+  blockType: default
+  dimensions:
+    width: 960
+    height: 320
+  editorType: SqlQueryUnified
+  resourceName: 9aa25924-1790-4fa0-b0a1-5d1daf399f6a
+  incomingPorts:
+    - portId: deef61ed-24c0-4639-a77c-505e33bdcb1b
+      blockId: 697428f9-3ae4-42b5-9535-eb9a2186aa9e
+  responsePanelState: open
+  incomingOnSuccessEdges: []

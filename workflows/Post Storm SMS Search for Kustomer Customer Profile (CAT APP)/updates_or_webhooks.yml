@@ -1,0 +1,128 @@
+id: updates_or_webhooks
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: >
+        if
+        (update_and_webhook_profiles.data.filter(row=>row.operation==='update').length>0)
+        {
+          executePathAtMostOnce('0')
+        }
+
+        else if
+        (update_and_webhook_profiles.data.filter(row=>row.operation==='webhook').length>0)
+        {
+          executePathAtMostOnce('1')
+        }
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - editorMode: sql
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-09-10T18:19:56.402Z
+blockData:
+  top: -784
+  left: 7376
+  uuid: b53ea327-5ee9-472f-85df-837dc664e182
+  comment:
+    body: >-
+      If we have update operations, trigger the update workflow. 
+
+
+      If we don't have any update operations, skip the update workflow and
+      trigger the webhook workflow.
+    visible: true
+    pluginId: branch2-comment
+  options:
+    conditions:
+      - id: cc118cd9-d6c4-4605-a404-4dbe5ada21ad
+        type: if
+        statement: >-
+          update_and_webhook_profiles.data.filter(row=>row.operation==='update').length>0
+        outgoingPortId: 5088f36a-6b74-4028-8e70-6322066a417e
+      - id: ae19c8d1-5531-4de5-8dde-d91b11cee9bd
+        type: if
+        statement: >-
+          update_and_webhook_profiles.data.filter(row=>row.operation==='webhook').length>0
+        outgoingPortId: d3d8c192-9630-440b-b924-53980661086d
+  pluginId: updates_or_webhooks
+  blockType: conditional
+  editorType: JavascriptQuery
+  onboarding: false
+  isMinimized: false
+  resourceName: JavascriptQuery
+  incomingPorts: []
+  outgoingPorts:
+    - id: 5088f36a-6b74-4028-8e70-6322066a417e
+      name: '0'
+      type: conditional
+    - id: d3d8c192-9630-440b-b924-53980661086d
+      name: '1'
+      type: conditional
+  incomingOnSuccessEdges:
+    - 32017615-9a65-4bd7-ab43-213d3e52f9b9
