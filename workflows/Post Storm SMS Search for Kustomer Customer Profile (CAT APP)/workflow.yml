@@ -1,0 +1,410 @@
+customLibraries:
+  array:
+    - object:
+        version: 4.17.21
+        language: javascript
+        variable: _
+        codeString: |
+          /* Edit library variable below */
+
+          const _ = require('lodash')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+        libraryName: lodash
+    - object:
+        version: 2.1.0
+        language: javascript
+        variable: numbro
+        codeString: |
+          /* Edit library variable below */
+
+          const numbro = require('numbro')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+        libraryName: numbro
+    - object:
+        version: 5.3.2
+        language: javascript
+        variable: Papa
+        codeString: |
+          /* Edit library variable below */
+
+          const Papa = require('papaparse')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+        libraryName: papaparse
+    - object:
+        version: 0.5.23
+        language: javascript
+        variable: moment
+        codeString: |
+          /* Edit library variable below */
+
+          const moment = require('moment-timezone')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+        libraryName: moment-timezone
+    - object:
+        version: 3.4.0
+        language: javascript
+        variable: uuid
+        codeString: |
+          /* Edit library variable below */
+
+          const uuid = require('uuid')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+        libraryName: uuid
+name: Post Storm SMS Search for Kustomer Customer Profile (CAT APP)
+setupScripts:
+  object:
+    python:
+      object:
+        codeString: ''
+    javascript:
+      object:
+        codeString: |
+          // lodash
+          /* Edit library variable below */
+
+          const _ = require('lodash')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+
+          // numbro
+          /* Edit library variable below */
+
+          const numbro = require('numbro')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+
+          // papaparse
+          /* Edit library variable below */
+
+          const Papa = require('papaparse')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+
+          // moment-timezone
+          /* Edit library variable below */
+
+          const moment = require('moment-timezone')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+
+          // uuid
+          /* Edit library variable below */
+
+          const uuid = require('uuid')
+
+          /* Add destructured imports from library below
+          eg. const { pow, log } = require("mathjs") */
+triggerWebhooks:
+  array:
+    - object:
+        name: startTrigger
+        uuid: startTrigger
+        inputSchema:
+          object:
+            properties:
+              array: []
+        useHeaderApiKey: false
+        exampleInputJSON: |-
+          {
+            'wave_name': 'Test126-Pre-Storm_SMS_Wave_1',
+            'profiles': [
+              {
+               'name': 'Bekki Wasmuth',
+                'phones': 12483189032,
+                'email':'bekkiy.wasmuth@gmail.com',
+                'kinCatSeverityLevelTree': 1,
+                'externalIds': 1014275,
+                'policyIdStr': 'KIN-HO-FL-123456789'
+              },
+              {//fail by phone, success by exteralid
+               'name': 'Garry Geaslin',
+                'phones': 18176370217,
+                'email':'garrison.geaslin@kin.com',
+                'kinCatSeverityLevelTree': 2,
+                'externalIds': 112233, //3
+                'policyIdStr': 'KIN-1202-test'
+              },
+                {//fail lookup by external id
+                  // success by phone
+               'name': 'Garry Geaslin',
+                'phones': 18176370218,
+                'email':'garrison.geaslin@kin.com',
+                'kinCatSeverityLevelTree': 2,
+                'externalIds': 11223, //3
+                'policyIdStr': 'KIN-1203-test'
+              },
+                {//Same name, lookup by phone succss
+                  'name': 'Testing Customer3',
+                  'phones': 18882222104,
+                  'email': 'testing_email4@kin.com',
+                  'kinCatSeverityLevelTree': 5,
+                  'externalIds': 421004,
+                  'policyIdStr': 'KIN-1207-test'
+                },
+                {//success by email
+                  'name': 'Testing Customer1',
+                  'phones': 1888222213,//2,
+                  'email': 'testing_email1@kin.com',
+                  'kinCatSeverityLevelTree': 3,
+                  'externalIds': 105020,//421004,
+                  'policyIdStr': 'KIN-1208-test'
+                },
+                {//success by email
+                  'name': 'Testing Customer5',
+                  'phones': 18822281813,//2,
+                  'email': 'testing_email5@kin.com',
+                  'kinCatSeverityLevelTree': 4,
+                  'externalIds': 760501,//421004,
+                  'policyIdStr': 'KIN-1209-test'
+                }
+            ]
+          }
+version: 43.0.9
+workflowId: beff07ac-8cf0-4c0e-aa83-d06225b11229
+description: null
+workflowTemplate:
+  pageCodeFolders:
+    object:
+      environment_branch:
+        array: []
+      return_profiles:
+        array: []
+      staging_loop_kustomer_profile_update:
+        array: []
+      staging_loop_kustomer_profile_update_lambda:
+        array: []
+      return_profiles_prod:
+        array: []
+      return_profiles_staging:
+        array: []
+      production_loop_kustomer_profile_update:
+        array: []
+      production_loop_kustomer_profile_update_lambda:
+        array: []
+      update_staging_input_kustomer_sent_at:
+        array: []
+      update_staging_input_table_kustomer_sent_at:
+        array: []
+      slack_error_handler:
+        array: []
+      update_production_input_table_kustomer_sent_at:
+        array: []
+      kustomer_profile_update_loop:
+        array: []
+      kustomer_profile_update_loop_lambda:
+        array: []
+      update_input_table_kustomer_sent_at:
+        array: []
+      datetime_generator:
+        array: []
+      update_kustomer_sent_at_table:
+        array: []
+      post_kustomer_updates:
+        array: []
+      post_kustomer_updates_lambda:
+        array: []
+      post_kustomer_update:
+        array: []
+      post_kustomer_update_loop:
+        array: []
+      get_kustomer_customers_by_id:
+        array: []
+      query1:
+        array: []
+      get_kustomer_customers_by_phone:
+        array: []
+      customer_found_externalId:
+        array: []
+      customer_not_found_externalId:
+        array: []
+      tag_found_or_not_found:
+        array: []
+      customer_not_found_by_externalId:
+        array: []
+      customer_found_by_externalId:
+        array: []
+      tag_found_or_not_found_externalId:
+        array: []
+      tag_found_or_not_found_phone_number:
+        array: []
+      customer_not_found_by_phone:
+        array: []
+      customer_found_by_phone:
+        array: []
+      format_kustomer_customer_update:
+        array: []
+      format_kustomer_customer_update_by_phone:
+        array: []
+      format_kustomer_customer_update_by_externalId:
+        array: []
+      update_kustomer_customer2:
+        array: []
+      update_kustomer_customer1:
+        array: []
+      loop_update_kustomer_customer2:
+        array: []
+      loop_update_kustomer_customer1:
+        array: []
+      format_post_search_batches_by_externalId:
+        array: []
+      post_kustomer_customers_search_by_id:
+        array: []
+      format_post_search_batches_by_phone_number:
+        array: []
+      post_kustomer_customers_search_by_phone:
+        array: []
+      post_create_kustomer_bulk:
+        array: []
+      loop_post_create_kustomer_bulk:
+        array: []
+      loop_post_bulk_create_kustomer_customer:
+        array: []
+      format_kustomer_customer_create:
+        array: []
+      get_successful_created_customers:
+        array: []
+      successful_batches:
+        array: []
+      successful_batches_exist:
+        array: []
+      format_table_update_payload:
+        array: []
+      loop_update_kustomer_sent_at:
+        array: []
+      loop_update_input_table_kustomer_sent_at:
+        array: []
+      loop_update_kustomer_table_sent_at:
+        array: []
+      code2:
+        array: []
+      get_successful_customer_updates1:
+        array: []
+      code3:
+        array: []
+      get_successful_customer_updates2:
+        array: []
+      successful_updates1:
+        array: []
+      format_table_update_payload1:
+        array: []
+      successful_updates_exist1:
+        array: []
+      datetime_generator1:
+        array: []
+      datetime_generator2:
+        array: []
+      loop_update_kustomer_table_sent_at2:
+        array: []
+      loop_update_kustomer_table_sent_at1:
+        array: []
+      loop_update_input_table_kustomer_sent_at1:
+        array: []
+      successful_updates2:
+        array: []
+      successful_updates_exist2:
+        array: []
+      format_table_update_payload3:
+        array: []
+      datetime_generator3:
+        array: []
+      trigger_update_or_create_workflow:
+        array: []
+      trigger_update_workflow:
+        array: []
+      trigger_create_workflow:
+        array: []
+      trigger_update_workflow1:
+        array: []
+      trigger_update_workflow2:
+        array: []
+      format_bulk_update:
+        array: []
+      format_bulk_update_by_externalid:
+        array: []
+      bulk_update_by_externalid:
+        array: []
+      format_bulk_update_by_phone:
+        array: []
+      bulk_update_by_phone:
+        array: []
+      format_bulk_update_profile_not_found:
+        array: []
+      bulk_update_profile_not_found:
+        array: []
+      format_post_search_batches_by_email:
+        array: []
+      post_kustomer_customers_search_by_email:
+        array: []
+      tag_found_or_not_found_email:
+        array: []
+      branch6:
+        array: []
+      all_matches:
+        array: []
+      compute_operation:
+        array: []
+      update_profiles:
+        array: []
+      create_profiles:
+        array: []
+      webhook_profiles:
+        array: []
+      updates_exist:
+        array: []
+      creates_exist:
+        array: []
+      webhooks_exist:
+        array: []
+      format_bulk_create:
+        array: []
+      bulk_update:
+        array: []
+      send_webhook_profiles:
+        array: []
+      format_bulk_webhook:
+        array: []
+      bulk_update_profile_sent_to_webhook:
+        array: []
+      update_kustomer_table_create_operation:
+        array: []
+      update_and_webhook_profiles:
+        array: []
+      query2:
+        array: []
+      updates_or_webhooks_exist:
+        array: []
+      update_kustomer_table_update_or_webhook_operation:
+        array: []
+      trigger_webhook_workflow:
+        array: []
+      format_operation_update:
+        array: []
+      bulk_update_:
+        array: []
+      bulk_update_operation:
+        array: []
+      all_creates:
+        array: []
+      updates_or_webhooks:
+        array: []
+  appTesting:
+    object:
+      testSuites:
+        array: []
+      tests:
+        object: {}
+  version: 3.96.0

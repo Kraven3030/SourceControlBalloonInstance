@@ -1,0 +1,115 @@
+id: bulk_update_operation
+type: datasource
+subtype: SqlQueryUnified
+resourceName: 9aa25924-1790-4fa0-b0a1-5d1daf399f6a
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - records: '{{ value }}'
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: ''
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - dataArray: []
+    - cacheKeyTtl: ''
+    - filterBy: ''
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - workflowActionType: null
+    - editorMode: gui
+    - queryRunTime: null
+    - actionType: BULK_UPDATE_BY_KEY
+    - changesetObject: ''
+    - shouldUseLegacySql: false
+    - errorTransformer: return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - databaseWarehouseOverride: ''
+    - enableBulkUpdates: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - bulkUpdatePrimaryKey: id
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - tableName: cas.post_storm_sms_kustomer_sent
+    - queryTimeout: '100000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - databaseUsernameOverride: ''
+    - databaseRoleOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-09-11T17:19:49.707Z
+blockData:
+  top: -784
+  left: 6960
+  uuid: 32017615-9a65-4bd7-ab43-213d3e52f9b9
+  options:
+    iterable: 7eb5da5e-bb3c-4a9e-8cd8-19d87eaaa51e
+    batchConfig:
+      batchSize: 1
+      delayInMs: 0
+    timeoutInMs: 100000
+    executionMode: sequential
+    breakCondition: ''
+    iterationErrorConfig:
+      errorPolicy: ignore
+  pluginId: bulk_update_operation
+  blockType: loop
+  editorType: SqlQueryUnified
+  onboarding: false
+  isMinimized: false
+  resourceName: 9aa25924-1790-4fa0-b0a1-5d1daf399f6a
+  incomingOnSuccessEdges:
+    - 7eb5da5e-bb3c-4a9e-8cd8-19d87eaaa51e

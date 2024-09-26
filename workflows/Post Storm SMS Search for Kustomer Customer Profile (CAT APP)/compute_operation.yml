@@ -1,0 +1,118 @@
+id: compute_operation
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: |-
+        const array_to_parse = tag_found_or_not_found_email.data;
+        array_to_parse.forEach(row=> {
+          let phone_check = row.customer_phone_found ? row.phone_id : undefined;
+          let externalid_check = row.customer_externalid_found ? row.externalid_id : undefined;
+          let email_check = row.customer_email_found ? row.email_id : undefined;
+
+          let same_values = true; //Assume all values are the same
+          //Gather all non-undefined Kustomer profile IDs into an array
+          let ids = [phone_check, externalid_check, email_check].filter(val => val !== undefined);
+          if(ids.length>1){
+
+            //Check every value in the ids array to see if they're the same
+            same_values = ids.every((val, index, arr) => val === arr[0]);
+          }
+
+          if(!row.customer_phone_found && !row.customer_externalid_found && !row.customer_email_found){
+            row.operation = 'create';
+            row.customer_found=false;
+          } else if(same_values) {
+            row.operation = 'update';
+            row.customer_found=true;
+          } else {
+            row.operation = 'webhook'
+            row.customer_found=true;
+          }
+          row.kustomer_search_flag=true;
+        });
+
+        return array_to_parse;
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-09-06T15:02:53.632Z
+blockData:
+  top: -896
+  left: 4896
+  uuid: 76e428b6-cf06-43b8-9664-40cdf4bbebd9
+  pluginId: compute_operation
+  blockType: code
+  dimensions:
+    width: 704
+    height: 576
+  editorType: JavascriptQuery
+  resourceName: JavascriptQuery
+  responsePanelState: open
+  incomingOnSuccessEdges:
+    - 5b1fb2d4-65ad-4bf3-be2e-8803e6c3236f

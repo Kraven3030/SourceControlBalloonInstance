@@ -1,0 +1,124 @@
+id: tag_found_or_not_found_phone_number
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: >-
+        const profiles = return_profiles.data;
+
+        const kustomers_by_phone_batched =
+        post_kustomer_customers_search_by_phone.data.map(item => item?.data);
+
+        const policy_map = new Map();
+
+
+        kustomers_by_phone_batched.forEach(batch => {
+          batch?.forEach(kustomer => {
+            //Only checking the first phone number in the list of phone numbers
+            const phone_number = kustomer.attributes.phones[0].phone.replace('+','').toString();
+            if(phone_number) {
+              policy_map.set(phone_number, {kustomer_policyNumberStr: kustomer.attributes.custom?.policyIdStr, id: kustomer.id});
+            }
+          });
+        });
+
+
+        profiles.forEach(profile => {
+          const customer = policy_map.get(profile.phones.toString());
+          profile.customer_phone_found = !!customer;
+          if(customer) {
+            //profile.kustomer_policyNumberStr_by_phone = customer.kustomer_policyNumberStr;
+            profile.phone_id=customer.id;//phone_id meaning ID found by phone.
+          }
+        });
+
+
+        return profiles;
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-08-26T16:46:02.544Z
+blockData:
+  top: -896
+  left: 144
+  uuid: fb25edad-616a-42cf-a4f1-9aa86f183dc2
+  comment:
+    body: Only checking the first phone number in the array of phone numbers
+    visible: true
+    pluginId: tag_found_or_not_found_phone_number-comment
+  pluginId: tag_found_or_not_found_phone_number
+  blockType: code
+  dimensions:
+    width: 816
+    height: 512
+  editorType: JavascriptQuery
+  isMinimized: false
+  resourceName: JavascriptQuery
+  responsePanelState: open
+  incomingOnSuccessEdges:
+    - 12a79fd9-f459-4feb-b6d5-75a42bb9f588
