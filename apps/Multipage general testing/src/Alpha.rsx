@@ -2,6 +2,7 @@
   id="Alpha"
   _hashParams={[]}
   _searchParams={[]}
+  headerHidden={false}
   title="Default Page"
   urlSlug=""
 >
@@ -70,5 +71,16 @@
       }
       xAxisDropdown="region"
     />
+    <Button id="button1" text="Button">
+      <Event
+        event="click"
+        method="openPage"
+        params={{ ordered: [{ pageName: "Charlie" }] }}
+        pluginId=""
+        type="util"
+        waitMs="0"
+        waitType="debounce"
+      />
+    </Button>
   </Frame>
 </Screen>

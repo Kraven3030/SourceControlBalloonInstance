@@ -2,6 +2,7 @@
   id="Charlie"
   _hashParams={[]}
   _searchParams={[]}
+  headerHidden={false}
   title={null}
   urlSlug=""
 >
