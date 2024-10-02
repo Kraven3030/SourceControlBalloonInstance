@@ -1,4 +1,11 @@
-<Screen id="Bravo" _hashParams={[]} _searchParams={[]} title={null} urlSlug="">
+<Screen
+  id="Bravo"
+  _hashParams={[]}
+  _searchParams={[]}
+  headerHidden={false}
+  title={null}
+  urlSlug=""
+>
   <Frame
     id="$main2"
     enableFullBleed={false}
