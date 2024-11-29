@@ -1,0 +1,44 @@
+{
+  "button1": {
+    "row": 61,
+    "height": 1.4
+  },
+  "button2": {
+    "row": 9.4,
+    "height": 1,
+    "width": 2
+  },
+  "chart1": {
+    "row": 54,
+    "height": 7,
+    "width": 6
+  },
+  "container1": {
+    "row": 53.8,
+    "col": 2,
+    "height": 0.2,
+    "width": 6
+  },
+  "containerTitle1": {
+    "container": "container1",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 12
+  },
+  "customComponent1": {
+    "row": 53.8,
+    "col": 8,
+    "height": 4,
+    "width": 4
+  },
+  "html1": {
+    "row": 44.2,
+    "col": 10,
+    "height": 0.2,
+    "width": 2
+  },
+  "table1": {
+    "height": 8,
+    "width": 8
+  }
+}
