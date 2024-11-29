@@ -1,0 +1,125 @@
+id: return_profiles
+type: datasource
+subtype: SqlQueryUnified
+resourceName: c8dbd143-a6aa-47da-8b7d-5de7ec0999d3
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - records: ''
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: |-
+        SELECT
+          id,
+          policyholder_name AS name,
+          REPLACE(policyholder_phone_number, '+', '') AS phones,
+          policyholder_email AS email,
+          kincatseverityleveltree AS kinCatSeverityLevelTree,
+          externalids AS externalIds,
+          event_name AS mostRecentEventSmsSentStr,
+          policy_number AS policyIdStr
+        FROM
+          cas.post_storm_sms_kustomer_sent
+        WHERE
+          wave_name = {{ startTrigger.data.wave_name }}
+          AND kustomer_update_sent_at IS NULL
+          AND kustomer_webhook_sent_at IS NULL
+          AND kustomer_profile_created_at IS NULL
+          AND kustomer_search_flag IS NULL;
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - warningCodes: []
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - dataArray: []
+    - cacheKeyTtl: ''
+    - filterBy: ''
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - workflowActionType: null
+    - editorMode: sql
+    - queryRunTime: null
+    - actionType: ''
+    - changesetObject: ''
+    - shouldUseLegacySql: false
+    - errorTransformer: return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - databaseWarehouseOverride: ''
+    - enableBulkUpdates: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - bulkUpdatePrimaryKey: ''
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - tableName: ''
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - databaseUsernameOverride: ''
+    - databaseRoleOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-09-10T17:02:16.912Z
+blockData:
+  top: -928
+  left: -2176
+  uuid: b1a888e0-6ff6-4211-b41a-3ac6b2fd1a64
+  pluginId: return_profiles
+  blockType: default
+  dimensions:
+    width: 576
+    height: 464
+  editorType: SqlQueryUnified
+  resourceName: c8dbd143-a6aa-47da-8b7d-5de7ec0999d3
+  responsePanelState: open
+  incomingOnSuccessEdges:
+    - b976e5d0-9c2b-46a5-95c1-12f4bde3553d

@@ -1,0 +1,114 @@
+id: format_post_search_batches_by_externalId
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: |+
+        var searchCriteria =[];
+        const array_to_parse = tag_found_or_not_found_phone_number.data;
+        for(let j =0;j<array_to_parse.length;j++){
+          searchCriteria.push({
+            customer_externalId: {equals:array_to_parse[j].externalids }})
+        }
+        //  return searchCriteria
+        const batchSize = 20; 
+        var batches = [];
+        for (
+          let i = 0;
+          i < searchCriteria.length;
+          i += batchSize
+        ) {
+          let batch = searchCriteria.slice(i, i + batchSize);
+          batches.push(batch);
+        }
+        return batches
+
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-08-28T16:08:09.128Z
+blockData:
+  top: -896
+  left: 992
+  uuid: bdd8812e-d6d1-4027-830a-47b68e753bc8
+  comment:
+    body: ''
+    visible: false
+    pluginId: format_post_search_batches_by_externalId-comment
+  pluginId: format_post_search_batches_by_externalId
+  blockType: code
+  dimensions:
+    width: 496
+    height: 448
+  editorType: JavascriptQuery
+  isMinimized: false
+  resourceName: JavascriptQuery
+  incomingPorts: []
+  responsePanelState: open
+  incomingOnSuccessEdges:
+    - fb25edad-616a-42cf-a4f1-9aa86f183dc2

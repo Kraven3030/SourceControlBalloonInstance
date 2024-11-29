@@ -1,0 +1,148 @@
+id: startTrigger
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - workflowRunId: null
+    - showFailureToaster: true
+    - query: |-
+        return {
+          'wave_name': 'Test126-Pre-Storm_SMS_Wave_1',
+          'profiles': [
+            {
+             'name': 'Bekki Wasmuth',
+              'phones': 12483189032,
+              'email':'bekkiy.wasmuth@gmail.com',
+              'kinCatSeverityLevelTree': 1,
+              'externalIds': 1014275,
+              'policyIdStr': 'KIN-HO-FL-123456789'
+            },
+            {//fail by phone, success by exteralid
+             'name': 'Garry Geaslin',
+              'phones': 18176370217,
+              'email':'garrison.geaslin@kin.com',
+              'kinCatSeverityLevelTree': 2,
+              'externalIds': 112233, //3
+              'policyIdStr': 'KIN-1202-test'
+            },
+              {//fail lookup by external id
+                // success by phone
+             'name': 'Garry Geaslin',
+              'phones': 18176370218,
+              'email':'garrison.geaslin@kin.com',
+              'kinCatSeverityLevelTree': 2,
+              'externalIds': 11223, //3
+              'policyIdStr': 'KIN-1203-test'
+            },
+              {//Same name, lookup by phone succss
+                'name': 'Testing Customer3',
+                'phones': 18882222104,
+                'email': 'testing_email4@kin.com',
+                'kinCatSeverityLevelTree': 5,
+                'externalIds': 421004,
+                'policyIdStr': 'KIN-1207-test'
+              },
+              {//success by email
+                'name': 'Testing Customer1',
+                'phones': 1888222213,//2,
+                'email': 'testing_email1@kin.com',
+                'kinCatSeverityLevelTree': 3,
+                'externalIds': 105020,//421004,
+                'policyIdStr': 'KIN-1208-test'
+              },
+              {//success by email
+                'name': 'Testing Customer5',
+                'phones': 18822281813,//2,
+                'email': 'testing_email5@kin.com',
+                'kinCatSeverityLevelTree': 4,
+                'externalIds': 760501,//421004,
+                'policyIdStr': 'KIN-1209-test'
+              }
+          ]
+        }
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: |-
+        // Query results are available as the `data` variable
+        return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-05-21T14:42:21.370Z
+blockData:
+  top: -928
+  left: -2656
+  uuid: b976e5d0-9c2b-46a5-95c1-12f4bde3553d
+  options: {}
+  pluginId: startTrigger
+  blockType: webhook
+  editorType: JavascriptQuery
+  isMinimized: false
+  resourceName: JavascriptQuery
+  incomingOnSuccessEdges: []

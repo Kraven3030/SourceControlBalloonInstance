@@ -1,0 +1,117 @@
+id: post_kustomer_customers_search_by_phone
+type: datasource
+subtype: RESTQuery
+resourceName: 6d20af43-7136-4473-8ded-3adf77ef35d4
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - body: >-
+        [{"key":"or","value":"{{ value
+        }}"},{"key":"queryContext","value":"customer"}]
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: '[]'
+    - workflowRunId: null
+    - showFailureToaster: true
+    - paginationEnabled: false
+    - query: customers/search
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - workflowBlockUuid: null
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - isImported: false
+    - showSuccessToaster: true
+    - cacheKeyTtl: ''
+    - requestSentTimestamp: null
+    - cookies: ''
+    - metadata: null
+    - workflowActionType: null
+    - queryRunTime: null
+    - changesetObject: ''
+    - errorTransformer: return data.error
+    - finished: null
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - paginationDataField: ''
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - version: 2
+    - overrideOrgCacheForUserCache: false
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - type: POST
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - bodyType: json
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-08-26T15:08:34.285Z
+blockData:
+  top: -896
+  left: -448
+  uuid: 12a79fd9-f459-4feb-b6d5-75a42bb9f588
+  comment:
+    body: |
+      Search by phone number, if still not found, search by externalid
+    visible: true
+    pluginId: get_kustomer_customers_by_phone-comment
+  options:
+    iterable: 3ae2b6de-7208-4f4e-9958-78339f369fc6
+    batchConfig:
+      batchSize: 1
+      delayInMs: 500
+    executionMode: sequential
+    breakCondition: ''
+    iterationErrorConfig:
+      errorPolicy: ignore
+  pluginId: post_kustomer_customers_search_by_phone
+  blockType: loop
+  dimensions:
+    width: 560
+    height: 341
+  editorType: RESTQuery
+  onboarding: false
+  isMinimized: false
+  resourceName: 6d20af43-7136-4473-8ded-3adf77ef35d4
+  incomingPorts: []
+  responsePanelState: open
+  incomingOnSuccessEdges:
+    - 3ae2b6de-7208-4f4e-9958-78339f369fc6
