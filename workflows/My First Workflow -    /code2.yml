@@ -1,4 +1,4 @@
-id: code1
+id: code2
 type: datasource
 subtype: JavascriptQuery
 resourceName: JavascriptQuery
@@ -16,16 +16,10 @@ template:
     - playgroundQuerySaveId: latest
     - workflowParams: null
     - resourceNameOverride: ''
-    - runWhenModelUpdates: true
+    - runWhenModelUpdates: false
     - workflowRunId: null
     - showFailureToaster: true
-    - query: |-
-        return [
-          { message: "Hello from Workflows" },
-          { message: "Click the Run (▶) button to execute this block" },
-          { message: "Drag from the green sequence port to connect a new block" },
-          { message: "Click the help (?) button to learn more" },
-        ];
+    - query: return code1.data
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -44,16 +38,9 @@ template:
     - requestSentTimestamp: null
     - metadata: null
     - workflowActionType: null
-    - editorMode: sql
     - queryRunTime: null
     - changesetObject: ''
-    - errorTransformer: >-
-        // The variable 'data' allows you to reference the request's data in the
-        transformer. 
-
-        // example: return data.find(element => element.isError)
-
-        return data.error
+    - errorTransformer: return data.error
     - finished: null
     - confirmationMessage: null
     - isFetching: false
@@ -72,11 +59,9 @@ template:
     - showUpdateSetValueDynamicallyToggle: true
     - overrideOrgCacheForUserCache: false
     - runWhenPageLoads: false
-    - transformer: |-
-        // Query results are available as the `data` variable
-        return data
+    - transformer: return data
     - events: []
-    - queryTimeout: '120000'
+    - queryTimeout: '10000'
     - workflowId: null
     - requireConfirmation: false
     - queryFailureConditions: ''
@@ -87,17 +72,14 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2024-08-13T21:17:05.921Z
+createdAt: 2025-02-10T15:51:34.624Z
 blockData:
-  top: 48
-  left: 480
-  uuid: f78a6494-2e7a-4d77-af2c-3e0a162c5aa9
-  pluginId: code1
+  top: 32
+  left: 1136
+  uuid: 239ac108-4d64-46b8-b4f0-dac58b4061ff
+  pluginId: code2
   blockType: code
-  dimensions:
-    width: 400
-    height: 280
   editorType: JavascriptQuery
   resourceName: JavascriptQuery
   incomingOnSuccessEdges:
-    - ed34b82b-2ed4-40a0-b01c-75a0d8aa5219
+    - f78a6494-2e7a-4d77-af2c-3e0a162c5aa9
