@@ -75,24 +75,20 @@ template:
     - notificationDuration: ''
 createdAt: 2025-05-12T08:22:15.202Z
 blockData:
-  top: 704
-  left: 1280
+  top: 784
+  left: 1104
   uuid: 7f2e155c-e0b4-478a-a175-230ad0c5383b
   options:
     taskType: userTask
     appConfig:
       uuid: 404676a0-2f0a-11f0-b644-f3e94febb757
-    assignees:
-      - id: 21
-        type: user
+    assignees: []
     groupAssignments: []
     adminUserAssignments: []
     inputsTemplateString: '{}'
     adminGroupAssignments: []
     groupAssignmentNames: []
-    assigneesWithTextIdentifiers:
-      - type: user
-        email: blake@retool.com
+    assigneesWithTextIdentifiers: []
     adminGroupAssignmentNames: []
     adminUserAssignmentEmails: []
   pluginId: userTask1
