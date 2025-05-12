@@ -83,7 +83,7 @@ blockData:
     appConfig:
       uuid: 404676a0-2f0a-11f0-b644-f3e94febb757
     assignees:
-      - id: 1
+      - id: 21
         type: user
     groupAssignments: []
     adminUserAssignments: []
@@ -92,7 +92,7 @@ blockData:
     groupAssignmentNames: []
     assigneesWithTextIdentifiers:
       - type: user
-        email: blake+2@retool.com
+        email: blake@retool.com
     adminGroupAssignmentNames: []
     adminUserAssignmentEmails: []
   pluginId: userTask1
