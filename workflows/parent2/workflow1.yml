@@ -1,0 +1,97 @@
+id: workflow1
+type: datasource
+subtype: WorkflowRun
+resourceName: WorkflowRun
+template:
+  queryRefreshTime: ''
+  allowedGroupIds: []
+  streamResponse: false
+  lastReceivedFromResourceAt: null
+  isFunction: false
+  functionParameters: null
+  queryDisabledMessage: ''
+  servedFromCache: false
+  offlineUserQueryInputs: ''
+  functionDescription: null
+  successMessage: ''
+  queryDisabled: ''
+  playgroundQuerySaveId: latest
+  workflowParams: ''
+  resourceNameOverride: ''
+  runWhenModelUpdates: false
+  workflowRunExecutionType: async
+  workflowRunId: null
+  showFailureToaster: true
+  query: ''
+  playgroundQueryUuid: ''
+  playgroundQueryId: null
+  error: null
+  workflowRunBodyType: raw
+  privateParams: []
+  workflowBlockUuid: null
+  queryRunOnSelectorUpdate: false
+  runWhenPageLoadsDelay: ''
+  data: null
+  importedQueryInputs:
+    ordered: []
+  isImported: false
+  showSuccessToaster: true
+  cacheKeyTtl: ''
+  requestSentTimestamp: null
+  metadata: null
+  workflowActionType: run-workflow
+  editorMode: sql
+  queryRunTime: null
+  changesetObject: ''
+  offlineOptimisticResponse: null
+  errorTransformer: >-
+    // The variable 'data' allows you to reference the request's data in the
+    transformer. 
+
+    // example: return data.find(element => element.isError)
+
+    return data.error
+  finished: null
+  confirmationMessage: null
+  isFetching: false
+  changeset: ''
+  rawData: null
+  queryTriggerDelay: '0'
+  resourceTypeOverride: null
+  watchedParams: []
+  enableErrorTransformer: false
+  showLatestVersionUpdatedWarning: false
+  timestamp: 0
+  evalType: script
+  importedQueryDefaults:
+    ordered: []
+  enableTransformer: false
+  showUpdateSetValueDynamicallyToggle: true
+  overrideOrgCacheForUserCache: false
+  runWhenPageLoads: false
+  transformer: |-
+    // Query results are available as the `data` variable
+    return data
+  events: []
+  queryTimeout: '10000'
+  workflowId: 9f01b2f7-69ef-48cc-b5c3-d1e9cb4dd0b9
+  requireConfirmation: false
+  queryFailureConditions: ''
+  changesetIsObject: false
+  enableCaching: false
+  allowedGroups: []
+  offlineQueryType: None
+  queryThrottleTime: '750'
+  updateSetValueDynamically: false
+  notificationDuration: ''
+createdAt: 2025-07-14T22:34:01.280Z
+blockData:
+  top: 48
+  left: 1120
+  uuid: 7603bdab-e75e-4096-bdf8-dc5e3e9af592
+  pluginId: workflow1
+  blockType: default
+  editorType: WorkflowRun
+  resourceName: WorkflowRun
+  incomingOnSuccessEdges:
+    - 6f3bb442-e134-4ae0-9ba6-3a7b204b1fac
